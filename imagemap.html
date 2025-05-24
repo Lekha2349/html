@@ -1,0 +1,84 @@
+<!-- rect - defines a rectangular region
+circle - defines a circular region
+poly - defines a polygonal region
+default - defines the entire region-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Basic styling for the body to center content and apply a font */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+            background-color: #f3f4f6; /* Light gray background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Full viewport height */
+            padding: 1rem;
+        }
+
+        /* Styling for the container div */
+        .container {
+            background-color: #ffffff; /* White background for the content area */
+            padding: 2rem; /* Ample padding */
+            border-radius: 0.5rem; /* Rounded corners */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+            max-width: 42rem; /* Max width for readability */
+            width: 100%; /* Full width on smaller screens */
+        }
+
+        /* Styling for the paragraph with the background image */
+        .paragraph-with-bg {
+            /* Ensure text is white for contrast against the image */
+            color: #ffffff; 
+            padding: 1.5rem; /* Padding inside the paragraph */
+            border-radius: 0.375rem; /* Slightly rounded corners for the paragraph */
+            min-height: 12.5rem; /* Minimum height to show more of the background image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.125rem; /* Larger font size */
+            font-weight: 500; /* Medium font weight */
+            line-height: 1.625; /* Improved line spacing */
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* Inner shadow for depth */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Background Image</h2>
+
+        <p class="text-lg text-gray-700 mb-4">A background image for a p element:</p>
+        
+        <a href="https://www.bing.com/th/id/OIP.KIH8Y2B8xLbxfCzV223ZSAHaIp?w=160&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="text-blue-600 hover:underline mb-6 inline-block">Visit birds image</a> 
+        
+        <p style="background-image: url('https://www.bing.com/th/id/OIP.KIH8Y2B8xLbxfCzV223ZSAHaIp?w=160&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2/'); 
+                   background-repeat: no-repeat; 
+                   background-size: cover; 
+                   background-position: center; 
+                   background-attachment: fixed;" 
+           class="paragraph-with-bg">
+            You can specify background images<br>
+            for any visible HTML element.<br>
+            In this example, the background image<br>
+            is specified for a p element.<br>
+            By default, the background-image<br>
+            will repeat itself in the direction(s)<br>
+            where it is smaller than the element<br>
+            where it is specified. Try resizing the<br>
+            browser window to see how the<br>
+            background image behaves.
+        </p>
+    </div>
+
+</body>
