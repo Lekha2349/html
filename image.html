@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="box" style="width:200px; height:200px; background:orange;"></div>
+    <script>
+      document.getElementById("box").onclick = function () {
+        this.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
+      };
+    </script>
+  </body>
+</html>
