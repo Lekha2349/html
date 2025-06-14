@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body onclick="document.body.style.background = getColor()">
+<h1>Click me for color!</h1>
+<script>
+function getColor() {
+  return `hsl(${Math.random()*360}, 100%, 80%)`;
+}
+</script>
+</body>
+</html>
