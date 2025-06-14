@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body style="overflow:hidden">
+    <script>
+      setInterval(() => {
+        let e = document.createElement("div");
+        e.innerText = "🌸";
+        e.style.position = "absolute";
+        e.style.left = Math.random() * window.innerWidth + "px";
+        e.style.fontSize = Math.random() * 30 + 20 + "px";
+        document.body.appendChild(e);
+        let fall = setInterval(() => {
+          e.style.top = (parseFloat(e.style.top || 0) + 5) + "px";
+          if (parseFloat(e.style.top) > window.innerHeight) {
+            e.remove(); clearInterval(fall);
+          }
+        }, 50);
+      }, 200);
+    </script>
+  </body>
+</html>
